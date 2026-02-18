@@ -12,6 +12,7 @@ El proyecto está organizado de la siguiente manera:
 
 * `index.html`: El punto de entrada principal para visualizar los bocetos.
 * `sketch.js`: Archivo principal donde reside la lógica de p5.js.
+* `styles.css`: Hoja de estilos para darle un toque de elegancia a la página web.
 
 ## 💻 Cómo ejecutarlo localmente
 
