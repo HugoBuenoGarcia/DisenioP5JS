@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mi Web con Fondo Interactivo</title>
+    <meta name="description"
+        content="Página HTML5 con p5.js integrado. Menú, imágenes, formulario y fondo interactivo que responde al ratón." />
+    <!-- Fuente y estilos -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+    <!-- CSS externo -->
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <!-- Canvas de p5 fijo al fondo -->
+    <div id="bg-canvas" aria-hidden="true"></div>
+    <!-- Contenido encima del canvas -->
+    <header class="content" role="banner">
+        <nav class="nav" aria-label="Navegación principal">
+            <div class="logo">MiProyecto</div>
+            <div class="menu" role="menubar">
+                <a href="#productos" role="menuitem">Productos</a>
+                <a href="#servicios" role="menuitem">Servicios</a>
+                <a href="#contacto" role="menuitem">Contacto</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="content" role="main">
+        <section class="hero" id="inicio">
+            <div>
+                <div class="kicker">Experiencia interactiva</div>
+                <h1>Un fondo reactivo que aporta espectacularidad sin sacrificar la utilidad</h1>
+                <p class="lead">
+                    Este sitio integra un canvas p5.js con interacción del ratón para generar partículas,
+                    ondas y parallax suave.
+                </p>
+                <div class="cta">
+                    <button class="btn primary">Empezar</button>
+                    <button class="btn secondary">Ver demo</button>
+                </div>
+            </div>
+            <figure class="hero-figure">
+                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1280&auto=format&fit=crop"
+                    alt="Visual abstracto tecnológico en tonos azul y púrpura" />
+            </figure>
+        </section>
+
+        <!-- Secciones -->
+        <section id="productos">
+            <h2>Nuestros productos</h2>
+            <div class="grid">
+                <article class="card">
+                    <h3>Analítica</h3>
+                    <p>Paneles en tiempo real...</p>
+                </article>
+                <article class="card">
+                    <h3>Automatización</h3>
+                    <p>Flujos inteligentes...</p>
+                </article>
+                <article class="card">
+                    <h3>Experiencias</h3>
+                    <p>Interfaces inmersivas...</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="servicios">
+            <h2>Servicios</h2>
+            <div class="grid">
+                <article class="card">
+                    <h3>Consultoría UX</h3>
+                    <p>Investigación de usuarios...</p>
+                </article>
+                <article class="card">
+                    <h3>Desarrollo web</h3>
+                    <p>Stack moderno...</p>
+                </article>
+                <article class="card">
+                    <h3>Branding</h3>
+                    <p>Narrativa visual...</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <form action="#" method="post">
+                <div class="form-row">
+                    <div><label for="nombre">Nombre</label><input id="nombre" name="nombre" type="text" required />
+                    </div>
+                    <div><label for="email">Email</label><input id="email" name="email" type="email" required /></div>
+                </div>
+                <div class="form-row">
+                    <div><label for="tipo">Tipo de proyecto</label>
+                        <select id="tipo" name="tipo" required>
+                            <option value="">Selecciona</option>
+                            <option value="web">Sitio web</option>
+                            <option value="app">Aplicación</option>
+                            <option value="brand">Branding</option>
+                        </select>
+                    </div>
+                    <div><label for="presupuesto">Presupuesto</label><input id="presupuesto" name="presupuesto"
+                            type="text" /></div>
+                </div>
+                <div><label for="mensaje">Mensaje</label><textarea id="mensaje" name="mensaje" required></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn primary">Enviar</button>
+                    <button type="reset" class="btn secondary">Limpiar</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="content" role="contentinfo">
+        © 2025 MiProyecto · Hecho con HTML5 y p5.js
+    </footer>
+
+    <!-- p5.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js"></script>
+    <!-- Script externo -->
+    <script src="sketch.js"></script>
+</body>
+</html>
