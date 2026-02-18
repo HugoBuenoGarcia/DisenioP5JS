@@ -12,8 +12,6 @@ El proyecto está organizado de la siguiente manera:
 
 * `index.html`: El punto de entrada principal para visualizar los bocetos.
 * `sketch.js`: Archivo principal donde reside la lógica de p5.js.
-* `/assets`: Carpeta que contiene imágenes, fuentes o sonidos utilizados (si aplica).
-* `/css`: Estilos para el contenedor del lienzo (canvas).
 
 ## 💻 Cómo ejecutarlo localmente
 
